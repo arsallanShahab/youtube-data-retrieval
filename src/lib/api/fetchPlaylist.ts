@@ -22,7 +22,7 @@ export const fetchPlaylists = async ({
   const queryString = new URLSearchParams(
     query as Record<string, string>
   ).toString();
-  const url = `http://localhost:3000/api/youtube/playlist?${queryString}`;
+  const url = `${process.env.NEXTAUTH_URL}/api/youtube/playlist?${queryString}`;
 
   try {
     const response = await fetch(url);
