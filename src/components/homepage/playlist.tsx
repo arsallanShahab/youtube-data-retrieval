@@ -59,7 +59,10 @@ export default function Playlist({ accessToken }: { accessToken: string }) {
             className="p-2 bg-zinc-100 rounded-xl"
           >
             <Image
-              src={playlist.snippet.thumbnails.high.url}
+              src={
+                playlist?.snippet?.thumbnails?.high?.url ??
+                "https://picsum.photos/seed/picsum/700/700"
+              }
               alt={playlist.snippet.title}
               width={1280}
               height={720}
