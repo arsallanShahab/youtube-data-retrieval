@@ -7,7 +7,10 @@ const Navbar = () => {
     <div className="max-w-screen-xl px-5 mx-auto">
       <div className="flex items-center justify-between py-5">
         <div className="flex items-center space-x-5">
-          <Link href={"/"} className="text-3xl font-geist-mono">
+          <Link
+            href={"/"}
+            className="text-md md:text-2xl lg:text-3xl font-geist-mono"
+          >
             Youtube Playlist
           </Link>
         </div>

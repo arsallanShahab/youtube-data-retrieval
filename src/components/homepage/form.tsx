@@ -49,7 +49,7 @@ const FormContainer = () => {
             <Input
               name="search"
               value={values.search}
-              className="py-5 px-10 bg-red-500 border-red-200 h-auto rounded-[99px] text-white text-xl  placeholder:text-white font-geist-mono"
+              className="py-5 px-10 bg-red-500 border-red-200 h-auto rounded-[99px] text-white text-lg  placeholder:text-white font-geist-mono"
               placeholder="Add channel id here"
               onChange={handleChange}
             />

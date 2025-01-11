@@ -1,3 +1,4 @@
+import { PLAYLIST_PER_PAGE } from "@/lib/constants";
 import { Query } from "@/lib/response/fetchPlaylist";
 import { NextRequest } from "next/server";
 import qs from "qs";
@@ -8,7 +9,7 @@ export async function GET(req: NextRequest) {
 
   const query: Query = {
     part: "snippet,contentDetails",
-    maxResults: "25",
+    maxResults: PLAYLIST_PER_PAGE,
     key: apiToken,
   };
 
@@ -26,6 +27,7 @@ export async function GET(req: NextRequest) {
       }
     );
     const data = await res.json();
+    console.log(data);
     return Response.json(data);
   } catch (error) {
     console.error(error);
